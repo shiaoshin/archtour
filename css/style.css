@@ -1,0 +1,205 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    font-family: 'Open Sans', Helvetica, Arial, "微軟正黑體", sans-serif;
+    background: url('../image/init.png') no-repeat;
+    background-size: cover;
+}
+.main {
+    width: 100vw;
+    height: 100vh;
+}
+.main:before {
+    content: "Connecting...Please make sure device is online";
+    position: absolute;
+    display: block;
+    text-align: center;
+    top: 45vh;
+    font-weight: 600;
+    font-size: 14px;
+    width: 100%;
+}
+/* Buttons */
+.btn {
+    position: absolute;
+    display: block;
+    width: 15vmin;
+    min-width: 40px;
+    max-width: 60px;
+    height: 15vmin;
+    min-height: 40px;
+    max-height: 60px;
+    color: #333;
+    font-size: 35px;
+    line-height: 40px;
+    text-align: center;
+    text-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+.btn.white {
+    color: #eee;
+}
+.btn.btn-menu {
+    top: 10px;
+    left: 10px;
+    z-index: 3;
+}
+.btn.btn-reload {
+    top: 10px;
+    right: 10px;
+    z-index: 3;
+}
+.btn.btn-close {
+    display: none;
+    top: 10px;
+    left: 10px;
+    z-index: 3;
+    color: #fff;
+}
+.btn.btn-center {
+    bottom: 10px;
+    right: 10px;
+    z-index: 0;
+}
+.btn.btn-site {
+    bottom: 10px;
+    left: 10px;
+    z-index: 0;
+}
+.btn.btn-site a{
+    color: #333;
+    text-decoration: none;
+}
+
+/* Base Layout */
+.modal {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    display: block;
+}
+.modal.container {
+    max-width: 620px;
+    top: 100vh;
+    left: 19.5%;
+}
+nav.modal {
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+.circle {
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    display: block;
+    background-color: rgba(50,50,50,0.9);
+    left: 29px;
+    top: 22px;
+    position: absolute;
+    overflow: hidden;
+    z-index: 2;
+}
+/* Menu Item */
+nav ul {
+    position: absolute;
+    width: 100vw;
+    height: 90vh;
+    top: 75px;
+    left: 69px;
+    font-size: 0.8em;
+    padding-top: 10vh;
+    line-height: 1.5em;
+    color: #fff;
+    overflow: auto;
+}
+nav li {
+    width: 90%;
+    margin: 20px 0 0 5%;
+}
+nav strong {
+    font-size: 20px;
+}
+nav strong:after {
+    content: "▸";
+    float: right;
+    font-size: 0.7em;
+}
+nav strong.down:after {
+    content: "▾";
+}
+nav hr {
+    border-bottom: 1px solid rgba(250,250,250,0.3)
+}
+
+/* Building Card */
+.building {
+    position: relative;
+    overflow: auto;
+    height: 90vh;
+    margin: 15px auto 0 auto;
+    background: #fff;
+    border-radius: 2%;
+    box-shadow: 0 -1px 8px 4px rgba(0,0,0,0.2);
+    color: #444;
+    border: 2px solid #fff;
+}
+.caption {
+    position: absolute;
+    width: 100%;
+    top: calc(37vh - 48px);
+    height: 34px;
+    background: rgba(0, 0, 0, 0.5);
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+}
+.image {
+    width: 100%;
+    height: 250px;
+    background-image: url('../image/placeholder.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    box-shadow: inset 0 -10px 10px -5px rgba(0,0,0,0.5);
+    background-clip: border-box;
+    border-radius: 2% 2% 0 0;
+}
+.title,
+.note_title {
+    padding-top: 20px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bolder;
+}
+.title_en,
+.note_title_en,
+.note_attr {
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 12px;
+}
+.meta {
+    border-left: 4px solid #ec4523;
+    margin: 0 10px 20px;
+    padding: 0 10px;
+}
+.meta div:before {
+    color: #ec4523;
+}
+.meta_style:before {content: "建築風格: "}
+.meta_floors:before {content: "樓層數: "}
+.meta_floors:after {content: "層樓"}
+.meta_height:before {content: "高度: "}
+.meta_height:after {content: "公尺"}
+.meta_year:before {content: "建造年份: "}
+.meta_year:after {content: "年"}
+.meta_architect:before {content: "建築師/事務所: "}
+.content,
+.note_content {
+    padding: 0 20px 50px;
+}
+.note_image {
+    width: calc(100% - 40px);
+    margin: 5px 20px 0;
+}

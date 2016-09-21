@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html manifest="cache.appcache">
+
+<head>
+    <title>Archtour Chicago</title>
+
+    <meta charset="UTF-8" />
+
+    <!-- Mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- iOS -->
+    <!--<link rel="apple-touch-icon-precomposed" href="image/logo_ios.png"/>-->
+    <link rel="apple-touch-icon" href="image/logo_ios.png"/>
+    <link rel="apple-touch-startup-image" href="image/" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <!-- Android -->
+    <link rel="icon" sizes="180x180" href="image/logo_android.png">
+    
+    <!-- Font -->
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,600,400' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+	<![endif]-->
+   
+    <!-- Makes Life Easier -->
+    <link href="css/snippet.css" rel="stylesheet" type="text/css" media="all">
+
+    <!-- Reset CSS -->
+    <link href="css/reset.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- CTAI icon Font -->
+    <link href="css/ctaifont.css" rel="stylesheet">
+    
+    <!-- Map API -->
+    <script src="https://maps.google.com/maps/api/js?sensor=true;key=AIzaSyCcxHuBSKMoJVhkoEfx5CEDhX8A9806TnA"></script>
+</head>
+
+<body>
+    <div class="main">
+        <div id="map" style="width:100vw;height:100vh"></div>
+        <div class="btn btn-menu"><span class="ctai-menu"></span></div>
+        <div class="btn btn-close"><span class="ctai-close"></span></div>
+        <div class="btn btn-reload"><span class="ctai-reload"></span></div>
+        <div class="btn btn-center"><span class="ctai-center"></span></div>
+        <div class="btn btn-site"><a href="http://ctai.co"><span class="ctai-site"></span></a></div>
+    </div>
+    <div class="modal container">
+        <article class="building">
+            <div class="caption"></div>
+            <div class="image"></div>
+            <div class="title"></div>
+            <div class="title_en"></div>
+            <div class="meta">
+                <div class="meta_style"></div>
+                <div class="meta_floors"></div>
+                <div class="meta_height"></div>
+                <div class="meta_year"></div>                
+                <div class="meta_architect"></div>
+            </div>
+            <div class="content"></div>
+            <div class="note_title"></div>
+            <div class="note_title_en"></div>
+            <img class="note_image"/>
+            <div class="note_attr"></div>
+            <div class="note_content"></div>
+        </article>
+    </div>
+    <nav class="modal">
+        <div class="circle">
+            <ul>
+                <li><strong>Archtour App 使用說明</strong><hr>
+                    <p>+使用App請保持網路連線。<br>
+                       +請開啟定位功能以增進使用體驗。<br>
+                       +點選地圖上任一建築圖示，會跳出該建築物的名稱及圖片，點選該圖片便會秀出完整的建築介紹；若要關閉該介紹，請點選卡片上方的地圖即可。<br>
+                       +功能說明：在地圖畫面的四個角落各有一個功能鍵<br>
+                       　<span class="ctai-menu"></span>/<span class="ctai-close"></span>：開啟與關閉說明選單<br>
+                        　<span class="ctai-reload"></span>：畫面重新整理<br>
+                        　<span class="ctai-center"></span>：畫面定位至地圖中央<br>
+                        　<span class="ctai-site"></span>：連結到CTAI官網<br>
+                        +App支援全螢幕模式，您可以將本頁儲存到手機桌面(Add to Home Screen)再開啟。<br>
+                        +App可在iOS 7及Android 4.4以上版本的智慧型手機順利運行。
+                    </p>
+                </li>
+                <li><strong>活動緣起</strong><hr>
+                    <p>建築之旅開始於2001年，伊利諾理工學院（IIT）建築系幾位老學長和學生會會長，在一場飯局中應時任台灣駐芝加哥文化組吳組長的邀約，以介紹芝加哥著名建築給台灣留學生為宗旨，合作籌辦了第一屆「IIT芝加哥建築之旅」。當時總共只有兩位講師和會長兼任工作人員，在短短兩週內規劃出一直沿用至今的14棟經典建築導覽路線與講解內容、摺頁。活動一路傳承發揚，建築之旅已然成為IIT台灣同學會年度最大盛事；規模也擴大成為今天總計近50位講師及工作人員、350名來自鄰近各州台灣同學共襄參與的美國中西部台灣留學生組織最大規模活動。</p>
+                </li>
+                <li><strong>2015建築之旅</strong><hr>
+                    <p>今年，第十四屆芝加哥建築之旅「原味芝加哥」。讓我們拋開艱深建築專業術語，回歸根本帶大家感受、欣賞建築空間的美好；讓在芝加哥的遊子以及旅人們，回到剛踏上這片土地，對陌生大陸的一切都充滿興趣的眼光來細細品味這個既陌生的又熟悉的城市。在9/27號，芝加哥，我們在這裡帶領大家回到每棟建築最一開始的紙上的構想，了解每棟建築背後生成的構思，讓大家看建築與城市之中的詩意。</p>
+                </li>
+                <li><strong>活動行程</strong><hr>
+                    <p>10:10 AM 報到開始<br>
+                    10:45 AM 講師簡報<br>
+                    12:50 PM 小隊分組、午餐<br>
+                    01:20 PM 陸路、水上導覽<br>
+                    05:30 PM 千禧公園大合照</p>
+                </li>
+                <li><strong>緊急聯絡人</strong><hr>
+                    <p>張貞桂 (312) 834-4870</p>
+                </li>
+                <li><strong>活動單位</strong><hr>
+                    <p>CTAI<br>
+                    芝加哥台灣建築師學會 (Chicago Taiwanese Architecture Institute) 是一個提供大眾建築相關教育、交流活動以及與台灣建築產業活動交流的非營利組織。本學會的宗旨是將建築教育不以高深艱澀的詞彙呈現，落實到普羅大眾可以參與、了解的活動，並提供一個芝加哥地區建築人才的華語交流平台。
+                </li>
+                <li><strong>贊助商家</strong><hr>
+                    <p>
+                        <a href="http://mysweetstation.com/" target="blank"><img src="image/sweetstation.jpg"/></a>
+                        <a href="#" target="blank"><img src="image/BestComputer.jpg"/></a>
+                        <a href="http://www.charlene-transport.com/" target="blank"><img src="image/charlene.jpg"/></a>
+                        <a href="http://www.ocac.gov.tw/ocac/" target="blank"><img src="image/ocac.jpg"/></a>
+                        <a href="http://www.ridgelineconsultantsllc.com/" target="blank"><img src="image/Ridgeline.jpg"/></a>
+                        <a href="http://www.taiwanembassy.org/US/CHI/mp.asp?mp=27" target="blank"><img src="image/teco.jpg"/></a>
+                    </p>
+                </li>
+                <li style="font-size:8px;">made with &hearts; by CTAI&trade;</li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- jQuery -->
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <!-- jQuery UI (easing) -->
+    <script src="js/jquery-ui.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>

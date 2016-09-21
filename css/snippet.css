@@ -1,0 +1,24 @@
+/* Font Anti-aliasing */
+html, body {
+	-moz-font-smoothing:antialiased;
+	-moz-text-size-adjust:100%;
+	-ms-font-smoothing:antialiased;
+	-ms-text-size-adjust:100%;
+	-webkit-font-smoothing:antialiased;
+	-webkit-text-size-adjust:100%;
+}
+
+/* Border-Box */
+. {
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/*Device Orientation 
+@media only screen and (max-device-width: 1024px) and (orientation:portrait) { 
+    .landscape { display: none; }
+}
+@media only screen and (max-device-width: 1024px) and (orientation:landscape) { 
+    .portrait { display: none; }
+}*/
