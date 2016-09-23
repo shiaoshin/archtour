@@ -82,7 +82,7 @@ $(function(){
     var encodedQuery = encodeURIComponent(query);
     var url = ['https://www.googleapis.com/fusiontables/v1/query'];
     url.push('?sql=' + encodedQuery);
-    url.push('&key=AIzaSyBoyngXg6v5bjENODxmfxOM4f4PavBGmQI');
+    url.push('&key=AIzaSyAyJu0DNQrfJf7wdMlxI9t7hE-lUgc655E');
     url.push('&callback=?');
 
     /* Call Data */ 
